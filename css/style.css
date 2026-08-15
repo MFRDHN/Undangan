@@ -93,6 +93,18 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1rem;
 }
 
+.cover__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 260px;
+}
+.cover__divider span { flex: 1; height: 1px; background: rgba(255, 255, 255, 0.5); }
+.cover__divider svg { width: 14px; height: 14px; color: var(--accent-gold); }
+
 .cover__guest {
   font-family: var(--font-display);
   font-weight: 600;
