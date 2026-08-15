@@ -6,7 +6,7 @@
   if (guestName) {
     const name = new URLSearchParams(location.search).get('to');
     if (name && name.trim()) {
-      guestName.textContent = name.trim();
+      guestName.textContent = name.trim().replace(/-/g, ' & ');
       document.getElementById('guest-name').hidden = false;
       document.getElementById('guest-note').hidden = false;
     }
