@@ -93,6 +93,15 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1rem;
 }
 
+.cover__guest {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin: 0 0 0.75rem;
+  color: var(--accent-gold);
+}
+
 .cover__ornament {
   color: var(--accent-gold);
   width: 180px;

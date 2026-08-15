@@ -1,6 +1,16 @@
 (() => {
   'use strict';
 
+  /* ---------- Nama tamu dari URL (?to=Nama) ---------- */
+  const guestName = document.getElementById('guest-name-text');
+  if (guestName) {
+    const name = new URLSearchParams(location.search).get('to');
+    if (name && name.trim()) {
+      guestName.textContent = name.trim();
+      document.getElementById('guest-name').hidden = false;
+    }
+  }
+
   /* ---------- Cover: open ---------- */
   const cover = document.getElementById('cover');
   const content = document.getElementById('content');
