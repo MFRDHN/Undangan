@@ -102,6 +102,15 @@ img { max-width: 100%; display: block; }
   color: var(--accent-gold);
 }
 
+.cover__guest-note {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.75rem;
+  opacity: 0.85;
+}
+
 .cover__ornament {
   color: var(--accent-gold);
   width: 180px;

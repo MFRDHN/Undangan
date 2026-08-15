@@ -8,6 +8,7 @@
     if (name && name.trim()) {
       guestName.textContent = name.trim();
       document.getElementById('guest-name').hidden = false;
+      document.getElementById('guest-note').hidden = false;
     }
   }
 
