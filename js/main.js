@@ -3,33 +3,13 @@
 
   /* ---------- Nama tamu dari URL (?to=Nama) ---------- */
   const guestName = document.getElementById('guest-name-text');
-  let guest = '';
   if (guestName) {
     const name = new URLSearchParams(location.search).get('to');
     if (name && name.trim()) {
-      guest = name.trim().replace(/-/g, ' & ');
-      guestName.textContent = guest;
+      guestName.textContent = name.trim().replace(/-/g, ' & ');
       document.getElementById('guest-name').hidden = false;
       document.getElementById('guest-note').hidden = false;
     }
-  }
-
-  /* ---------- Salin teks undangan untuk share WA ---------- */
-  const shareBtn = document.getElementById('btn-share-text');
-  if (shareBtn) {
-    const link = location.origin + location.pathname + (guest ? `?to=${encodeURIComponent(guest)}` : '');
-    const headline = guest ? `Kepada Yth. ${guest}` : 'Kepada Bapak/Ibu/Saudara/i';
-    shareBtn.addEventListener('click', async () => {
-      const text = `Assalamu'alaikum Warahmatullahi Wabarakatuh,\n\n${headline},\n\nTanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami Mila & Taufik yang insya Allah akan dilaksanakan pada:\n\nJumat, 11 September 2026\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.\n\nMohon maaf apabila ada kesalahan penulisan nama dan gelar.\n\nHormat kami,\nMila & Taufik\n\n${link}`;
-      const label = shareBtn.textContent;
-      try {
-        await navigator.clipboard.writeText(text);
-        shareBtn.textContent = 'Tersalin!';
-      } catch {
-        shareBtn.textContent = 'Gagal salin';
-      }
-      setTimeout(() => { shareBtn.textContent = label; }, 2500);
-    });
   }
 
   /* ---------- Cover: open ---------- */
