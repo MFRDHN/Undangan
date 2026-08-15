@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan — Mila & Taufik</title>
+  <meta name="description" content="Undangan pernikahan Mila Saputri & Taufik Hidayatullah — 11 September 2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SVG sprite ornamen -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Gonjong Minang berlapis dengan aksen berlian & titik emas -->
+    <symbol id="gonjong-rich" viewBox="0 0 240 44">
+      <path d="M120 4 C84 22 44 17 2 38 M120 4 C156 22 196 17 238 38" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M120 9 C86 24 48 19 6 40 M120 9 C154 24 192 19 234 40" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+      <polygon points="120,1 124,6 120,11 116,6" fill="currentColor" opacity="0.9"/>
+      <circle cx="66" cy="28" r="2" fill="currentColor" opacity="0.6"/>
+      <circle cx="174" cy="28" r="2" fill="currentColor" opacity="0.6"/>
+    </symbol>
+    <!-- Corner mewah berlapis dengan detail lingkaran di sudut -->
+    <symbol id="corner-fancy" viewBox="0 0 52 52">
+      <path d="M51 51 V20 C51 11 41 1 32 1 H1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M46 51 V22 C46 15 36 5 29 5 H1" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+      <circle cx="40" cy="12" r="2.8" fill="currentColor" opacity="0.85"/>
+      <circle cx="40" cy="12" r="5.5" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.45"/>
+    </symbol>
+    <!-- Motif bunga simetris 4 kelopak untuk divider -->
+    <symbol id="floral" viewBox="0 0 44 44">
+      <path d="M22 3 C27 11 27 17 22 22 C17 17 17 11 22 3Z" fill="currentColor" opacity="0.75"/>
+      <path d="M41 22 C33 27 27 27 22 22 C27 17 33 17 41 22Z" fill="currentColor" opacity="0.75"/>
+      <path d="M22 41 C17 33 17 27 22 22 C27 27 27 33 22 41Z" fill="currentColor" opacity="0.75"/>
+      <path d="M3 22 C11 17 17 17 22 22 C17 27 11 27 3 22Z" fill="currentColor" opacity="0.75"/>
+      <circle cx="22" cy="22" r="3.5" fill="currentColor"/>
+      <circle cx="22" cy="22" r="6.5" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.4"/>
+    </symbol>
+    <!-- Kelopak -->
+    <symbol id="petal" viewBox="0 0 20 20">
+      <path d="M10 2 C14 6 14 12 10 18 C6 12 6 6 10 2 Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- 1. COVER -->
+  <section id="cover" class="cover">
+    <div class="cover__bg" style="background-image:url('assets/herosection.jpg')"></div>
+    <div class="cover__overlay"></div>
+    <div class="cover__particles" aria-hidden="true"></div>
+    <div class="cover__inner">
+      <div class="cover__frame" aria-hidden="true">
+        <span class="cover-orn cover-orn--tl"><svg viewBox="0 0 52 52"><use href="#corner-fancy"/></svg></span>
+        <span class="cover-orn cover-orn--tr"><svg viewBox="0 0 52 52"><use href="#corner-fancy"/></svg></span>
+        <span class="cover-orn cover-orn--bl"><svg viewBox="0 0 52 52"><use href="#corner-fancy"/></svg></span>
+        <span class="cover-orn cover-orn--br"><svg viewBox="0 0 52 52"><use href="#corner-fancy"/></svg></span>
+      </div>
+      <p class="cover__topline" data-cover="1">Undangan Pernikahan</p>
+      <div class="cover__ornament" data-cover="2">
+        <svg viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      </div>
+      <h1 class="cover__names">
+        <span class="cover__name" data-cover="3">Mila</span>
+        <span class="cover__amp" data-cover="4">&#10022;</span>
+        <span class="cover__name" data-cover="5">Taufik</span>
+      </h1>
+      <p class="cover__date" data-cover="6">Jumat, 11 September 2026</p>
+      <button class="btn btn--cover" id="btn-open" data-cover="7">
+        <span>Buka Undangan</span>
+        <svg viewBox="0 0 24 24" class="btn__arrow"><path d="M12 4v16m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <main id="content" class="content" hidden>
+
+    <!-- 2. HERO -->
+    <section class="section hero" id="hero">
+      <div class="hero__photo-frame" data-anim="zoom">
+        <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+        <span class="orn orn--tr"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+        <span class="orn orn--bl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+        <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+        <img src="assets/herosection.jpg" alt="Mila & Taufik" class="hero__photo" loading="eager">
+      </div>
+      <div class="hero__text">
+        <h2 class="hero__names" data-anim="fade-up">
+          <svg class="hero__petal" viewBox="0 0 20 20" aria-hidden="true"><use href="#petal"/></svg>
+          Mila <span>&#10022;</span> Taufik
+          <svg class="hero__petal" viewBox="0 0 20 20" aria-hidden="true"><use href="#petal"/></svg>
+        </h2>
+        <div class="hero__line" data-anim="fade-up"></div>
+        <blockquote class="hero__quote" data-anim="fade-up">
+          "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram kepadanya."
+          <cite>— QS. Ar-Rum: 21</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <div class="divider" data-anim="draw">
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+    </div>
+
+    <!-- 3. MEMPELAI -->
+    <section class="section couple">
+      <h2 class="section__title" data-anim="fade-up">Bismillahirahmanirahim</h2>
+      <p class="section__lead" data-anim="fade-up">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+      <div class="couple__grid">
+        <article class="couple__card" data-anim="fade-left">
+          <div class="couple__photo-wrap">
+            <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+            <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+            <img src="assets/mempelai wanita.jpg" alt="Mila Saputri" class="couple__photo" loading="lazy">
+          </div>
+          <h3 class="couple__name">Mila Saputri</h3>
+          <p class="couple__detail">Putri ketiga dari pasangan<br>Alm. Bapak Mahyudin & Ibu Rosmaini</p>
+          <div class="couple__line"><svg class="couple__petal" viewBox="0 0 20 20" aria-hidden="true"><use href="#petal"/></svg></div>
+        </article>
+        <div class="couple__amp" data-anim="zoom">&#10022;</div>
+        <article class="couple__card" data-anim="fade-right">
+          <div class="couple__photo-wrap">
+            <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+            <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+            <img src="assets/mempelai pria.jpg" alt="Taufik Hidayatullah" class="couple__photo" loading="lazy">
+          </div>
+          <h3 class="couple__name">Taufik Hidayatullah</h3>
+          <p class="couple__detail">Putra kedua dari pasangan<br>Bapak Bakhri Bakar & Ibu Susanti Arita</p>
+          <div class="couple__line"><svg class="couple__petal" viewBox="0 0 20 20" aria-hidden="true"><use href="#petal"/></svg></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider" data-anim="draw">
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+    </div>
+
+    <!-- 4. OUR STORY -->
+    <section class="section story">
+      <h2 class="section__title" data-anim="fade-up">Our Story</h2>
+      <div class="timeline">
+        <div class="timeline__item" data-anim="fade-left">
+          <div class="timeline__dot"></div>
+          <h3 class="timeline__title">Pertemuan</h3>
+          <p class="timeline__time">2019</p>
+          <p class="timeline__text">Tidak ada yang kebetulan — pertemuan sederhana di 2019 menjadi awal perjalanan panjang.</p>
+        </div>
+        <div class="timeline__item" data-anim="fade-right">
+          <div class="timeline__dot"></div>
+          <h3 class="timeline__title">Pendekatan</h3>
+          <p class="timeline__time">—</p>
+          <p class="timeline__text">Kedekatan tumbuh dari obrolan kecil, hadir rasa nyaman, hingga memutuskan berkomitmen.</p>
+        </div>
+        <div class="timeline__item" data-anim="fade-left">
+          <div class="timeline__dot"></div>
+          <h3 class="timeline__title">Lamaran</h3>
+          <p class="timeline__time">Juni 2026</p>
+          <p class="timeline__text">Melewati proses dan ujian, semakin yakin satu sama lain, dipertemukan dalam ikatan penuh doa dan restu keluarga.</p>
+        </div>
+        <div class="timeline__item" data-anim="fade-right">
+          <div class="timeline__dot"></div>
+          <h3 class="timeline__title">Pernikahan</h3>
+          <p class="timeline__time">11 September 2026</p>
+          <p class="timeline__text">Ikrar janji suci pernikahan, disertai kutipan Ali bin Abi Thalib.</p>
+        </div>
+      </div>
+      <blockquote class="story__quote" data-anim="zoom">
+        <span class="quote-mark">&#8220;</span>
+        <p>"Apa yang menjadi takdirmu, akan menemukan jalannya untuk menemukanmu."</p>
+        <cite>— Ali bin Abi Thalib</cite>
+      </blockquote>
+    </section>
+
+    <div class="divider" data-anim="draw">
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+    </div>
+
+    <!-- 5. ACARA -->
+    <section class="section events">
+      <h2 class="section__title" data-anim="fade-up">Rangkaian Acara</h2>
+      <div class="countdown" data-target="2026-09-11T14:00:00+07:00" data-anim="zoom">
+        <div class="countdown__unit"><span class="countdown__num" id="cd-days">00</span><span class="countdown__label">Hari</span></div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-hours">00</span><span class="countdown__label">Jam</span></div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-minutes">00</span><span class="countdown__label">Menit</span></div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-seconds">00</span><span class="countdown__label">Detik</span></div>
+      </div>
+      <div class="events__cards">
+        <article class="event-card" data-anim="fade-up">
+          <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <div class="event-card__tag">Akad Nikah</div>
+          <h3 class="event-card__title">Akad Nikah</h3>
+          <p class="event-card__time">Jumat, 11 September 2026<br>14.00 WIB — selesai</p>
+          <p class="event-card__place">Kediaman mempelai wanita<br>Pasar Ampalam, Kampuang, Nagari Koto Tinggi Kuranji Hilir, Kab. Padang Pariaman</p>
+          <a class="btn btn--outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=-0.501611,100.041111">
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            Lihat Lokasi
+          </a>
+        </article>
+        <article class="event-card" data-anim="fade-up" style="--delay:.15s">
+          <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <div class="event-card__tag">Resepsi</div>
+          <h3 class="event-card__title">Resepsi</h3>
+          <p class="event-card__time">Sabtu, 12 September 2026<br>10.00 WIB — selesai</p>
+          <p class="event-card__place">Kediaman mempelai wanita<br>Pasar Ampalam, Kampuang, Nagari Koto Tinggi Kuranji Hilir, Kab. Padang Pariaman</p>
+          <a class="btn btn--outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=-0.501611,100.041111">
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            Lihat Lokasi
+          </a>
+        </article>
+        <article class="event-card" data-anim="fade-up" style="--delay:.3s">
+          <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <div class="event-card__tag">Resepsi 2</div>
+          <h3 class="event-card__title">Resepsi 2</h3>
+          <p class="event-card__time">Senin, 14 September 2026<br>10.00 WIB — selesai</p>
+          <p class="event-card__place">Jorong Sungai Tampang, Kec. Tanjung Sani,<br>Kab. Agam</p>
+          <a class="btn btn--outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Agam">
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            Lihat Lokasi
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider" data-anim="draw">
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+    </div>
+
+    <!-- 6. GALERI -->
+    <section class="section gallery">
+      <h2 class="section__title" data-anim="fade-up">Galeri</h2>
+      <div class="gallery__grid">
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi1.jpg" style="--delay:.0s"><img src="assets/sesi1.jpg" alt="Galeri" loading="lazy"></figure>
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi2.jpg" style="--delay:.06s"><img src="assets/sesi2.jpg" alt="Galeri" loading="lazy"></figure>
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi3.jpg" style="--delay:.12s"><img src="assets/sesi3.jpg" alt="Galeri" loading="lazy"></figure>
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi4.jpg" style="--delay:.18s"><img src="assets/sesi4.jpg" alt="Galeri" loading="lazy"></figure>
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi5.jpg" style="--delay:.24s"><img src="assets/sesi5.jpg" alt="Galeri" loading="lazy"></figure>
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi6.jpg" style="--delay:.3s"><img src="assets/sesi6.jpg" alt="Galeri" loading="lazy"></figure>
+        <figure class="gallery__item" data-anim="zoom" data-full="assets/sesi7.jpg" style="--delay:.36s"><img src="assets/sesi7.jpg" alt="Galeri" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <div class="divider" data-anim="draw">
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+    </div>
+
+    <!-- 7. AMPLOP DIGITAL -->
+    <section class="section gift">
+      <h2 class="section__title" data-anim="fade-up">Amplop Digital</h2>
+      <p class="section__lead" data-anim="fade-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Jika memberi merupakan ungkapan tanda kasih, silakan berikan melalui:</p>
+      <div class="gift__cards">
+        <article class="gift-card" data-anim="fade-up">
+          <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <div class="gift-card__icon">UOB</div>
+          <h3 class="gift-card__bank">UOB</h3>
+          <p class="gift-card__owner">a.n. Mila Saputri</p>
+          <p class="gift-card__number">7353773759</p>
+          <button class="btn btn--outline btn--copy" data-copy="7353773759">Salin Nomor Rekening</button>
+        </article>
+        <article class="gift-card" data-anim="fade-up" style="--delay:.15s">
+          <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <div class="gift-card__icon">Mandiri</div>
+          <h3 class="gift-card__bank">Bank Mandiri</h3>
+          <p class="gift-card__owner">a.n. Taufik Hidayatullah</p>
+          <p class="gift-card__number">1090019887397</p>
+          <button class="btn btn--outline btn--copy" data-copy="1090019887397">Salin Nomor Rekening</button>
+        </article>
+        <article class="gift-card" data-anim="fade-up" style="--delay:.3s">
+          <span class="orn orn--tl"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <span class="orn orn--br"><svg viewBox="0 0 40 40"><use href="#corner-fancy"/></svg></span>
+          <div class="gift-card__icon">BCA</div>
+          <h3 class="gift-card__bank">BCA</h3>
+          <p class="gift-card__owner">a.n. Taufik Hidayatullah</p>
+          <p class="gift-card__number">8550838771</p>
+          <button class="btn btn--outline btn--copy" data-copy="8550838771">Salin Nomor Rekening</button>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider" data-anim="draw">
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+      <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+    </div>
+
+    <!-- 8. RSVP & UCAPAN -->
+    <section class="section rsvp">
+      <h2 class="section__title" data-anim="fade-up">RSVP & Ucapan</h2>
+      <p class="section__lead" data-anim="fade-up">Mohon konfirmasi kehadiran dan tinggalkan doa serta ucapan untuk kami.</p>
+      <form class="rsvp__form" id="rsvp-form" data-anim="fade-up">
+        <label class="field">
+          <span>Nama</span>
+          <input type="text" name="nama" required maxlength="80" placeholder="Nama Anda">
+        </label>
+        <label class="field">
+          <span>Konfirmasi Kehadiran</span>
+          <select name="kehadiran" required>
+            <option value="">Pilih kehadiran</option>
+            <option value="hadir">Hadir</option>
+            <option value="tidak">Tidak Hadir</option>
+            <option value="ragu">Masih Ragu</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Jumlah Tamu</span>
+          <input type="number" name="jumlah" min="1" max="10" value="1">
+        </label>
+        <label class="field">
+          <span>Ucapan & Doa</span>
+          <textarea name="ucapan" maxlength="500" rows="4" placeholder="Tulis ucapan dan doa untuk kedua mempelai"></textarea>
+        </label>
+        <button type="submit" class="btn btn--gold">Kirim Ucapan</button>
+        <p class="rsvp__msg" id="rsvp-msg"></p>
+      </form>
+      <div class="rsvp__list" id="ucapan-list"></div>
+    </section>
+
+    <!-- 9. PENUTUP -->
+    <footer class="section closing">
+      <div class="closing__ornament" data-anim="draw">
+        <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+        <svg class="divider__center" viewBox="0 0 240 44"><use href="#gonjong-rich"/></svg>
+        <span class="divider__wing"><svg viewBox="0 0 44 44"><use href="#floral"/></svg></span>
+      </div>
+      <h2 class="closing__title" data-anim="fade-up">Terima Kasih</h2>
+      <p class="closing__text" data-anim="fade-up">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.</p>
+      <p class="closing__names" data-anim="fade-up">Mila <span>&#10022;</span> Taufik</p>
+      <p class="closing__date" data-anim="fade-up">11 · 09 · 2026</p>
+      <button class="btn btn--outline" id="btn-back-top" data-anim="fade-up">Kembali ke Atas</button>
+    </footer>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <img src="" alt="Foto" id="lightbox-img">
+  </div>
+
+  <!-- Floating music toggle -->
+  <button class="music-toggle" id="music-toggle" hidden aria-label="Putar musik">&#9834;</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
